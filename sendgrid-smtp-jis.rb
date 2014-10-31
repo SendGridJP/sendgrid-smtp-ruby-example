@@ -19,7 +19,7 @@ smtpapi.add_substitution("familyname", ["田中", "佐藤", "鈴木"])
 smtpapi.add_substitution("place", ["office", "home", "office"])
 smtpapi.add_section('office', '中野')
 smtpapi.add_section('home', '目黒')
-smtpapi.add_category('カテゴリ1')
+smtpapi.add_category('Category1')
 
 mail = Mail.new(:charset => "ISO-2022-JP") do
   from from
@@ -45,7 +45,7 @@ end
 mail.delivery_method(:smtp,
   address: "smtp.sendgrid.net",
   port: 587,
-  domain: "kke.co.jp",
+  domain: "gmail.com",
   authentication: :login,
   user_name: sendgrid_username,
   password: sendgrid_password
